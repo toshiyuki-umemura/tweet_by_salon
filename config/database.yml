@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: tweet_by_salon_production
-  username: tweet_by_salon
-  password: <%= ENV['TWEET_BY_SALON_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
