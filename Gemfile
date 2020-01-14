@@ -93,3 +93,4 @@ gem 'gretel'
 gem 'recaptcha', require: "recaptcha/rails"
 gem 'dotenv-rails'
 gem 'nokogiri', '1.10.7'
+gem 'pristine'
