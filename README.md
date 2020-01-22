@@ -31,6 +31,7 @@ tweetできるCRUD開発アプリで、tagをつけることでジャンル別�
 | user_id | references | null: false, foreign_key: true |
 
 ### Association
+- has_one : tag
 - belongs_to :user
 
 ---
