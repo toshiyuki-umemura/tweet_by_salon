@@ -1,24 +1,56 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## tweet_by_salonとは？
+オンラインサロン内で4名の有志による共同開発をしようという取り組みです。
 
-Things you may want to cover:
+## tweetとは？
+tweetできるCRUD開発アプリで、tagをつけることでジャンル別にも表示可能な仕様です。
 
-* Ruby version
+## E-R図
+<img width="600" alt="tweet" src="https://gyazo.com/fba5cb570fb4e328ea5fee6acf5d7d53.png">
 
-* System dependencies
+## Userテーブル
+|カラム名|タイプ|オプション|
+|--|--|--|
+| name      | string | null: false |
+| email     | string | null: false, unique: true |
+| password  | string | null: false |
+| nickname  | string | null: false, unique: true |
 
-* Configuration
+### Association
+- has_many : tweet
+- has_many : comment
 
-* Database creation
+---
+## Tweetテーブル
+|カラム名|タイプ|オプション|
+|--|--|--|
+| name    | string | null: false |
+| content | text   | null: false |
+| image   | string |
+| user_id | references | null: false, foreign_key: true |
 
-* Database initialization
+### Association
+- belongs_to :user
 
-* How to run the test suite
+---
+## Commentテーブル
+|カラム名|タイプ|オプション|
+|--|--|--|
+| content  | string | null: false |
+| user_id  | references | null: false, foreign_key: true |
+| tweet_id | references | null: false, foreign_key: true |
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+- belongs_to :user
+- belongs_to :tweet
 
-* Deployment instructions
+---
+## Tagテーブル
+|カラム名|タイプ|オプション|
+|--|--|--|
+| tag  | string | null: false |
+| tweet_id | references | null: false, foreign_key: true |
 
-* ...
+### Association
+- belongs_to :tweet
