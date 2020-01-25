@@ -25,7 +25,7 @@ tweetできるCRUD開発アプリで、tagをつけることでジャンル別�
 ## Tweetテーブル
 |カラム名|タイプ|オプション|
 |--|--|--|
-| name    | string | null: false |
+| title   | string | null: false |
 | content | text   | null: false |
 | image   | string |
 | user_id | references | null: false, foreign_key: true |
