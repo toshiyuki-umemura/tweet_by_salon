@@ -50,6 +50,9 @@ GEM
       sshkit (>= 1.6.1, != 1.7.0)
     ancestry (3.0.7)
       activerecord (>= 3.2.0)
+    annotate (3.0.3)
+      activerecord (>= 3.2, < 7.0)
+      rake (>= 10.4, < 14.0)
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
@@ -389,6 +392,7 @@ PLATFORMS
 DEPENDENCIES
   active_hash
   ancestry
+  annotate
   bootsnap (>= 1.1.0)
   byebug
   capistrano
