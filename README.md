@@ -1,10 +1,22 @@
 # README
 
+## URL
+http://18.178.18.18/
+
 ## tweet_by_salonとは？
-オンラインサロン内で4名の有志による共同開発をしようという取り組みです。
+オンラインサロン内で4名の有志による共同開発をしようという取り組みです。<br>
 
 ## tweetとは？
-tweetできるCRUD開発アプリで、tagをつけることでジャンル別にも表示可能な仕様です。
+・tweetできるCRUD開発アプリ<br>
+・tag機能によりジャンル別にフィルタリングが可能<br>
+・comment機能によりユーザー間コミュニケーションが可能<br>
+
+## Requirement
+・ruby ：2.5.1<br>
+・rails：5.2.3<br>
+
+## Author
+Tatsuaki、まっすー、ハリソン、しゅん
 
 ## E-R図
 <img width="600" alt="tweet" src="https://gyazo.com/fba5cb570fb4e328ea5fee6acf5d7d53.png">
