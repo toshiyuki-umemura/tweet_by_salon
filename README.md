@@ -16,7 +16,7 @@ http://18.178.18.18/
 ・rails：5.2.3<br>
 
 ## Author
-Tatsuaki、まっすー、ハリソン、しゅん
+Tatsuaki、まっすー、ハリソン、Masa、しゅん
 
 ## E-R図
 <img width="600" alt="tweet" src="https://gyazo.com/fba5cb570fb4e328ea5fee6acf5d7d53.png">
