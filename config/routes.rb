@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :tweets, only: [:index]
   resources :users, only: %i[new create]
   resources :comments, only: %i[create destroy]
-  
+  resources :tags, only: %i[create]
 end
