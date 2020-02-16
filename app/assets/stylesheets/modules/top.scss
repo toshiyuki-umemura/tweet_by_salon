@@ -1,3 +1,75 @@
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+header {
+    width: 100%;
+    height: 10vh;
+    @include background-color();
+
+    div.header_container{
+        width: 100%;
+        height: 10vh;
+        display:flex;
+        align-content: start; 
+        @include position-center();
+        a.title{
+            align-self: center; //縦方向中央
+            text-decoration: none;
+            font-size: 30px;
+            color: $main-color;
+        }
+        ul{
+            width: 40%;
+            height: auto;
+            display:flex;
+            justify-content:flex-end ;
+            align-content: center;
+            list-style: none;
+            li{
+                margin-top: 20px;
+                margin-right: 20px;
+                a{
+                    text-decoration: none;
+                    font-size: 16px;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+
+div.main_container{
+    width: 100%;
+    height: 80%;
+    @include background-color();
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    form{
+        input.search{
+            width: 50vh;
+            height: 5vh;
+            color:  #f12711;
+            font-size: 16px;
+            font-weight: bold;
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+        input.btn{
+            @extend input.search;
+            background-color: seashell;
+            width: 15vh;
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    color: $main-color;
+    font-size: 16px;
+    @include background-color();
+    display: flex;
+    justify-content: center;
+}
