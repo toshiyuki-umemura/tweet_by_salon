@@ -1,0 +1,102 @@
+
+header {
+    width: 100%;
+    height: 10vh;
+    @include background-color();
+
+    div.header_container{
+        width: 100%;
+        height: 10vh;
+        display:flex;
+        align-content: start; 
+        @include position-center();
+        a.title{
+            align-self: center; //縦方向中央
+            text-decoration: none;
+            font-size: 30px;
+            color: $main-color;
+        }
+        ul{
+            width: 40%;
+            height: auto;
+            display:flex;
+            justify-content:flex-end ;
+            align-content: center;
+            list-style: none;
+            li{
+                margin-top: 20px;
+                margin-right: 20px;
+                a{
+                    text-decoration: none;
+                    font-size: 16px;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+
+div.main_container{
+    width: 100%;
+    height: 80%;
+    @include background-color();
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    form{
+        width: inherit;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .mail, .pass, .name, .nickname{
+            width: 50%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+            label{
+                width: 30%;
+                font-weight: bold;
+            }
+            input{
+                width: 60%;
+                outline: none;
+            }
+            .pass{
+                label{
+                margin-right: 20px;
+            }
+        }
+        }
+        .login_btn{
+                width: 30%;
+                height: 5vh;
+                display: flex;
+                justify-content: center;
+                -webkit-appearance: none;
+                font-size: 18px;
+                font-weight: bold;
+                margin-top: 10%;
+                margin-bottom: 10%;
+                border-radius: 10px;
+                box-shadow: 0px 5px 5px ;
+                outline: none;
+        }
+        .login_btn:active{
+            -webkit-transform: translateY(3px);
+            transform: translateY(3px);/*下に動く*/
+            box-shadow: 0px 0px 0px;
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: auto;
+    color: $main-color;
+    font-size: 16px;
+    @include background-color();
+    display: flex;
+    justify-content: center;
+}
