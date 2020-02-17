@@ -1,0 +1,45 @@
+<header>
+    <div class="header_container">
+        <a class="title" href="index.htm">タイトル</a>
+        <ul class="login sign-up">　
+            <li><a href="log-in.htm">ログイン</a></li>
+            <li><a href="sign-up.htm">新規登録</a></li>
+        </ul>
+    </div>
+</header>
+<h3>新規登録</h3>
+<div class="main_container">
+    <form action="" method="post">　<!--actionに送信先のプログラム名を入れてください-->
+        <div class="name">
+            <label for="user_name">ユーザーネーム:　　</label>
+            <input type="text" name="user_name" id="user_name" maxlength="10">
+        </div>
+
+        <div class="nick">
+            <label for="nick_name">ニックネーム:　　</label>
+            <input type="text" name="nick_name" id="nickname" maxlength="10">
+        </div>
+
+        <div class="mail">
+            <label for="email">メールアドレス:　　</label>
+            <input type="email" name="email" id="email_address">
+        </div>
+
+        <div class="pass">
+            <label for="password">パスワード:　　　　</label>
+            <input type="password" name="password" id="password">
+        </div>
+
+        <div class="passconf">
+            <label for="password_confirmaton">パスワード確認:　　</label>
+            <input type="password" name="password_confirmation" id="password_confirmation">
+        </div>
+
+            <input class="sign-up_btn" type="submit" value="登録">
+
+    </form>
+</div>
+
+<footer>
+    <div>&copy;とっくんサロン開発</div>
+</footer>
