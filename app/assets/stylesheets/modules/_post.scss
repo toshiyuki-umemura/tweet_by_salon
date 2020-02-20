@@ -17,9 +17,9 @@ header {
         }
     }
 }
-
-h2 {
+h1{
     @include background-color();
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
     padding-top: 5%;

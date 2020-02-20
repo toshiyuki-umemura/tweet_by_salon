@@ -1,14 +1,14 @@
-$('#imgFile').change(function(){
-    if (this.files.length > 0) {
-      // 選択されたファイル情報を取得
-      let file = this.files[0] //選択出来るファイルは一つのみ
-      
-      // readerのresultプロパティに、データURLとしてエンコードされたファイルデータを格納
-      var reader = new FileReader()
-      reader.readAsDataURL(file)
-      
-      reader.onload = function() {
-        $('#preview').attr('src', reader.result )
-      }
+$(function() {
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+    $('#preview').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+        }
     }
-  })
+    $("#imgFile").change(function(){
+        readURL(this);
+    });
+  });
