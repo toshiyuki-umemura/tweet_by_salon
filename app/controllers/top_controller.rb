@@ -1,6 +1,5 @@
-class TopController < ApplicationController
+# frozen_string_literal: true
 
-  def index
-  end
-  
+class TopController < ApplicationController
+  def index; end
 end
