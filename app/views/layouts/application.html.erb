@@ -22,11 +22,18 @@
           <%= link_to("ログイン", "/login") %>
         </li>
         <li>
-          <%= link_to("新規登録", "/signup") %>
+          <%= link_to("ログアウト", "/logout") %>
+        </li>
+
+        <li>
+          <%= link_to("新規登録", "signup") %>
         </li>
       </ul>
     </div>
   </header>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
   <%= yield %>
 
