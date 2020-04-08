@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root 'top#index'
   resources :top, only: [:index]
@@ -5,5 +7,6 @@ Rails.application.routes.draw do
   resources :users, only: %i[new create]
   resources :comments, only: %i[create destroy]
   resources :tags, only: %i[create]
-  get '/log-in' => 'top#log-in'
+  get 'login' => 'users#login_form'
+  get 'signup' => 'users#new'
 end
