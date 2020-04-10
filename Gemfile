@@ -103,3 +103,6 @@ gem "recaptcha", require: "recaptcha/rails"
 gem "dotenv-rails"
 gem "bcrypt", "~> 3.1.7"
 gem "omniauth-twitter"
+
+gem 'devise-i18n'
+gem 'devise-i18n-views'
