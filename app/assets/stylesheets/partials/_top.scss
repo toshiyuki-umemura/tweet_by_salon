@@ -1,0 +1,22 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+div.top_main_container {
+    height: auto;
+    @include background-color();
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input.search {
+            width: 50vh;
+            height: 5vh;
+            color: #f12711;
+            font-size: 16px;
+            font-weight: bold;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            padding: 1rem;
+        }
+    }
+}

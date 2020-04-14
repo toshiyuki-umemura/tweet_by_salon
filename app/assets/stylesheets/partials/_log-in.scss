@@ -1,39 +1,3 @@
-header {
-    width: 100%;
-    height: 10vh;
-    @include background-color();
-    div.header_container {
-        width: 100%;
-        height: 10vh;
-        display: flex;
-        align-content: start;
-        @include position-center();
-        div.title {
-            align-self: center; //縦方向中央
-            text-decoration: none;
-            font-size: 24px;
-            color: $main-color;
-        }
-        ul {
-            width: 40%;
-            height: auto;
-            display: flex;
-            justify-content: flex-end;
-            align-content: center;
-            list-style: none;
-            li {
-                margin-top: 20px;
-                margin-right: 20px;
-                a {
-                    text-decoration: none;
-                    font-size: 16px;
-                    color: $main-color;
-                }
-            }
-        }
-    }
-}
-
 div.main_container {
     width: 100%;
     height: 80%;
@@ -92,14 +56,4 @@ div.main_container {
             box-shadow: 0px 0px 0px;
         }
     }
-}
-
-footer {
-    width: 100%;
-    height: auto;
-    color: $main-color;
-    font-size: 16px;
-    @include background-color();
-    display: flex;
-    justify-content: center;
 }

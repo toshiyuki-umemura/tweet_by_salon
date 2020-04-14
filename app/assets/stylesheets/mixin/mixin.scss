@@ -1,8 +1,7 @@
-@mixin background-color { //グラデーションでの背景
-    background: #f12711;
-    background: -webkit-linear-gradient(to right, #f5af19, #f12711);
-    background: linear-gradient(to right, #f5af19, #f12711); 
+@mixin background-color {
+    //グラデーションでの背景
 }
+
 @mixin position-center {
     justify-content: center; //縦横中央に揃える
     align-content: center;
