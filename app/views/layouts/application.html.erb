@@ -6,8 +6,8 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 </head>
 
@@ -24,9 +24,11 @@
         <li>
           <%= link_to("ログアウト", "/logout") %>
         </li>
-
         <li>
-          <%= link_to("新規登録", "signup") %>
+          <%= link_to("新規登録", "/signup") %>
+        </li>
+        <li>
+          <%= link_to("投稿", "/tweets/new") %>
         </li>
       </ul>
     </div>
