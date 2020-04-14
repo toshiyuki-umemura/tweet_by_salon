@@ -28,3 +28,4 @@
 .vscode/launch.json
 .rubocop.yml
 .rubocop_todo.yml
+/.idea/.gitignore
