@@ -1,0 +1,32 @@
+<h1 class="title">新規投稿</h1>
+
+<div class="tweet_main_container">
+
+  <%= form_for @tweet, url: tweets_create_path do |f| %>
+    <%= f.error_messages! %>
+
+    <div class="form-group title <%= f.error_css(:nickname) %>">
+      <%= f.label :name, Tweet.human_attribute_name(:title) %><br>
+      <%= f.text_field :title %>
+    </div>
+    <%= f.fields_for :tag do |i| %>
+      <div class="tag  <%= f.error_css(:tag) %>">
+        <%= i.label :tag, Tag.human_attribute_name(:tag) %><br>
+        <%= i.text_field :tag %>
+      </div>
+    <% end %>
+    <div class="text  <%= f.error_css(:text) %>">
+      <%= f.label :name, Tweet.human_attribute_name(:text) %><br>
+      <%= f.text_area :text %>
+    </div>
+
+    <div class="nickname">
+      <%= current_user.nickname %>
+    </div>
+
+    <div class="post_btn">
+      <input class="btn btn-primary" type="submit" value="投稿">
+    </div>
+
+  <% end %>
+</div>

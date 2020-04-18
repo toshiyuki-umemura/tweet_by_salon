@@ -1,4 +1,11 @@
+# frozen_string_literal: true
+
 class Tweet < ApplicationRecord
-  validates :name, presence: true
+  has_one :tag, dependent: :destroy
+  accepts_nested_attributes_for :tag
+
+  validates :title, presence: true
   validates :text, presence: true
+  validates :tag, presence: true
+
 end
