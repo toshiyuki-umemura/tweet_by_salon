@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'top#index'
   resources :top, only: [:index]
-  resources :tweets, only: [:index]
+  resources :tweets
   resources :users, only: %i[new create]
   resources :comments, only: %i[create destroy]
   resources :tags, only: %i[create]
@@ -14,6 +14,4 @@ Rails.application.routes.draw do
     get 'login', to: 'users/sessions#new'
     get 'logout', to: 'users/sessions#destroy'
   end
-  get 'tweets/new' => 'tweets#new'
-  post 'tweets/create' => 'tweets#create'
 end
