@@ -2,7 +2,7 @@
 
 <div class="tweet_main_container">
 
-  <%= form_for @tweet, url: tweets_create_path do |f| %>
+  <%= form_for @tweet do |f| %>
     <%= f.error_messages! %>
 
     <div class="form-group title <%= f.error_css(:nickname) %>">
