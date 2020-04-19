@@ -21,15 +21,19 @@
         <li>
           <%= link_to("ログイン", "/login") %>
         </li>
-        <li>
-          <%= link_to("ログアウト", "/logout") %>
-        </li>
+        <% if user_signed_in? && current_user.id == tweet.user_id %>
+          <li>
+            <%= link_to("ログアウト", "/logout") %>
+          </li>
+        <% end %>
         <li>
           <%= link_to("新規登録", "/signup") %>
         </li>
-        <li>
-          <%= link_to("投稿", "/tweets/new") %>
-        </li>
+        <% if user_signed_in? && current_user.id == tweet.user_id %>
+          <li>
+            <%= link_to("投稿", "/tweets/new") %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </header>
