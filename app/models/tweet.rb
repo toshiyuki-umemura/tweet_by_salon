@@ -1,4 +1,6 @@
 class Tweet < ApplicationRecord
+  belongs_to :user
+  has_many :comments
   has_one :tag, dependent: :destroy
   accepts_nested_attributes_for :tag
 
