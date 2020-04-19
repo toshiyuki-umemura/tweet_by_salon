@@ -18,32 +18,22 @@
         <%= link_to("タイトル", "/") %>
       </div>
       <ul class="login sign-up">
-        <li>
-        <% if !user_signed_in? %>
-          <%= link_to("ログイン", "/login") %>
-        </li>
-        <% end %>
         <% if user_signed_in? %>
           <li>
             <%= link_to("ログアウト", "/logout") %>
           </li>
-        <% end %>
-        <li>
-        <% if !user_signed_in? %>
-          <%= link_to("新規登録", "/signup") %>
-        </li>
-        <% end %>
-        <% if user_signed_in? %>
           <li>
             <%= link_to("投稿", "/tweets/new") %>
           </li>
-        <% end %>
-        <%# ログイン時のビュー調整用のリスト %>
-        <li>
-        </li>
-        <% if user_signed_in? %>
           <li>
             <%= link_to("マイページ", "#") %>
+          </li>
+        <% else user_signed_in? %>
+          <li>
+            <%= link_to("ログイン", "/login") %>
+          </li>
+          <li>
+            <%= link_to("新規登録", "/signup") %>
           </li>
         <% end %>
       </ul>
