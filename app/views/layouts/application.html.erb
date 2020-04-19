@@ -19,17 +19,21 @@
       </div>
       <ul class="login sign-up">
         <li>
+        <% if !user_signed_in? %>
           <%= link_to("ログイン", "/login") %>
         </li>
-        <% if user_signed_in? && current_user.id == tweet.user_id %>
+        <% end %>
+        <% if user_signed_in? %>
           <li>
             <%= link_to("ログアウト", "/logout") %>
           </li>
         <% end %>
         <li>
+        <% if !user_signed_in? %>
           <%= link_to("新規登録", "/signup") %>
         </li>
-        <% if user_signed_in? && current_user.id == tweet.user_id %>
+        <% end %>
+        <% if user_signed_in? %>
           <li>
             <%= link_to("投稿", "/tweets/new") %>
           </li>
