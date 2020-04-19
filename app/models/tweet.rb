@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Tweet < ApplicationRecord
   has_one :tag, dependent: :destroy
   accepts_nested_attributes_for :tag
