@@ -38,6 +38,13 @@ div.tweet_main_container {
                 }
             }
         }
+        .img {
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
         .nickname {
             text-align: right;
         }
