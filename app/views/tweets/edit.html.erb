@@ -28,5 +28,9 @@
       <input class="btn btn-primary" type="submit" value="編集を反映する">
     </div>
 
+    <div class="post_btn">
+      <%= link_to '削除', "/tweets/#{@tweet.id}", method: :delete, class: "btn btn-primary delete_btn" %>
+    </div>
+
   <% end %>
 </div>
