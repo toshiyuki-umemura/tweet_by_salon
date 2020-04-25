@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :users, only: %i[new create]
   resources :comments, only: %i[create destroy]
   resources :tags, only: %i[create]
+  get 'search', to: 'top#search'
   devise_scope :user do
     get 'user/:id', to: 'users/registrations#detail'
     get 'signup', to: 'users/registrations#new'

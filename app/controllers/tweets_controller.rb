@@ -51,6 +51,10 @@ class TweetsController < ApplicationController
     end
   end
 
+  def show
+    @tweet = Tweet.find_by(id: params[:id])
+  end
+
   private
 
   def tweet_params

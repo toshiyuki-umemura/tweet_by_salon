@@ -2,21 +2,80 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 div.top_main_container {
-    height: auto;
-    @include background-color();
-    form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        input.search {
-            width: 50vh;
-            height: 5vh;
-            color: #f12711;
-            font-size: 16px;
-            font-weight: bold;
-            border: 1px solid transparent black;
-            border-radius: 5px;
-            padding: 1rem;
-        }
+  height: auto;
+  @include background-color();
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input.search {
+      width: 50vh;
+      height: 5vh;
+      border: 1px solid transparent black;
+      border-radius: 5px;
+      padding: 1rem;
     }
+  }
+
+  .content {
+    color: $main-color;
+    border: #2E2F30 1px solid;
+    width: 55vh;
+    margin: auto;
+
+    .title {
+      align-items: center;
+    }
+
+    .title,
+    .tag,
+    .text
+    {
+      display: flex;
+      max-width: 700px;
+      height: auto;
+      padding: 0.5rem;
+
+      label {
+        width: 100px;
+        font-weight: bold;
+      }
+
+      textarea {
+        width: 100%;
+        height: 100px;
+      }
+    }
+    .nickname {
+      text-align: right;
+    }
+
+    .title,
+    .tag,
+    .text {
+      border-bottom: #2E2F30 1px solid;
+    }
+
+    .nickname {
+      text-align: right;
+      height: auto;
+      margin-top: 1rem;
+      padding: 0.5rem;
+    }
+
+    .title-btn {
+      display: flex;
+      align-content: center;
+      margin-left: auto;
+    }
+  }
+
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
 }
