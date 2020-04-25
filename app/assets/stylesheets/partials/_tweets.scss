@@ -42,11 +42,14 @@ div.tweet_main_container {
             text-align: right;
         }
         .post_btn {
-            text-align: right;
+            text-align: center;
             width: 70%;
-            max-width: 700px;
             margin: auto;
             margin-top: 1rem;
+        }
+        .delete_btn {
+            display: inline-block;
+            text-align: left;
         }
     }
 }
