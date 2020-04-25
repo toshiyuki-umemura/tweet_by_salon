@@ -19,6 +19,10 @@
       <%= f.label :name, Tweet.human_attribute_name(:text) %><br>
       <%= f.text_area :text %>
     </div>
+    <div id="img_field">
+      <%= f.file_field :image, class: "image", id: "file"%>
+    </div>
+      <%= f.file_field :image, style: "display:none;", id: "file"%>
 
     <div class="nickname">
       <%= current_user.nickname %>

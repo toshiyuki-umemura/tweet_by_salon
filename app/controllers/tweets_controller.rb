@@ -57,7 +57,8 @@ class TweetsController < ApplicationController
     params.require(:tweet).permit(
         :title,
         :text,
-        tag_attributes: [:id, :tag]
+        :image,
+        tag_attributes: [:id, :tag],
     )
   end
 end
