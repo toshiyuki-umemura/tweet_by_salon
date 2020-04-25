@@ -18,18 +18,24 @@
         <%= link_to("タイトル", "/") %>
       </div>
       <ul class="login sign-up">
-        <li>
-          <%= link_to("ログイン", "/login") %>
-        </li>
-        <li>
-          <%= link_to("ログアウト", "/logout") %>
-        </li>
-        <li>
-          <%= link_to("新規登録", "/signup") %>
-        </li>
-        <li>
-          <%= link_to("投稿", "/tweets/new") %>
-        </li>
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to("ログアウト", "/logout") %>
+          </li>
+          <li>
+            <%= link_to("投稿", "/tweets/new") %>
+          </li>
+          <li>
+            <%= link_to("マイページ", "#") %>
+          </li>
+        <% else user_signed_in? %>
+          <li>
+            <%= link_to("ログイン", "/login") %>
+          </li>
+          <li>
+            <%= link_to("新規登録", "/signup") %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </header>

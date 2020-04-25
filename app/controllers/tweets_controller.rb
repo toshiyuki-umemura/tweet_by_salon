@@ -19,6 +19,38 @@ class TweetsController < ApplicationController
     end
   end
 
+  def edit
+    @tweet = Tweet.find(params[:id])
+  end
+
+  def update
+    @tweet = Tweet.find(params[:id])
+    if @tweet.user_id == current_user.id
+      if @tweet.update(tweet_params)
+        flash[:notice] = "投稿を更新しました"
+        redirect_to root_path
+      else
+        render :edit
+      end
+    else
+      render :index
+    end
+  end
+
+  def destroy
+    @tweet = Tweet.find(params[:id])
+    if @tweet.user_id == current_user.id
+      if @tweet.destroy
+        flash[:notice] = "投稿を削除しました"
+        redirect_to root_path
+      else
+        render :index
+      end
+    else
+      redirect_to root_path
+    end
+  end
+
   def show
     @tweet = Tweet.find_by(id: params[:id])
   end
