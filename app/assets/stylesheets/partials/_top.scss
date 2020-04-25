@@ -25,6 +25,10 @@ div.top_main_container {
     width: 55vh;
     margin: auto;
 
+    .title {
+      align-items: center;
+    }
+
     .title,
     .tag,
     .text
@@ -32,7 +36,6 @@ div.top_main_container {
       display: flex;
       max-width: 700px;
       height: auto;
-      margin-top: 1rem;
       padding: 0.5rem;
 
       label {
@@ -61,7 +64,14 @@ div.top_main_container {
       margin-top: 1rem;
       padding: 0.5rem;
     }
+
+    .title-btn {
+      display: flex;
+      align-content: center;
+      margin-left: auto;
+    }
   }
+
 
   .pagination {
     display: flex;

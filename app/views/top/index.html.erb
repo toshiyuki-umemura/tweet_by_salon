@@ -9,14 +9,24 @@
       <div class="title">
         <div><%= Tweet.human_attribute_name(:title) %>：</div>
         <div><%= tweet.title %></div>
+        <div class="title-btn">
+          <%= form_tag("/tweets/#{tweet.id}/edit", :method => 'get') do %>
+            <%= submit_tag '編集', :name => nil, class: 'btn btn-secondary mr-1' %>
+          <% end %>
+          <%= form_tag("/tweets/#{tweet.id}/destroy", :method => 'post') do %>
+            <%= submit_tag '削除', :name => nil, class: 'btn btn-secondary' %>
+          <% end %>
+        </div>
       </div>
 
-      <% tweet.tags.each do |tag| %>
-        <div class="tag">
-          <div><%= Tag.human_attribute_name(:tag) %>：</div>
-          <div><%= tag.tag %></div>
-        </div>
-      <% end %>
+      <div class="tag">
+        <div><%= Tag.human_attribute_name(:tag) %>：</div>
+        <% if tweet.tag.nil? %>
+          <div></div>
+        <% else %>
+          <div><%= tweet.tag.tag %></div>
+        <% end %>
+      </div>
 
       <div class="text">
         <div><%= tweet.text %></div>
