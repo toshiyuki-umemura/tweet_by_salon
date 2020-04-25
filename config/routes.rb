@@ -15,10 +15,4 @@ Rails.application.routes.draw do
     get 'login', to: 'users/sessions#new'
     get 'logout', to: 'users/sessions#destroy'
   end
-  get 'tweets/new' => 'tweets#new'
-  post 'tweets/create' => 'tweets#create'
-  get 'tweets/:id' => 'tweets#show'
-  get "tweets/:id/edit" => "tweets#edit"
-  post "tweets/:id/destroy" => "tweets#destroy"
-
 end
