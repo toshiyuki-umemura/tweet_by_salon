@@ -2,6 +2,7 @@
 
 class TopController < ApplicationController
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.search(params[:search]).page(params[:page]).per(5)
   end
+
 end

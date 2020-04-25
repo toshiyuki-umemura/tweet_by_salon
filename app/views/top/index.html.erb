@@ -1,7 +1,32 @@
 <div class="top_main_container">
-    <form action="" method="post">
-        <input class="search" type="search" name="search" id="keyword" placeholder="検索">
-        <input class="btn btn-primary" type="submit" value="検索">
-    </form>
-    <!--ここに投稿が入ります-->
+  <%= form_tag(root_path, :method => 'get') do %>
+    <%= text_field_tag :search, '', class: 'search' %>
+    <%= submit_tag '検索', :name => nil, class: 'btn btn-primary' %>
+  <% end %>
+
+  <% @tweets.each do |tweet| %>
+    <div class="content">
+      <div class="title">
+        <div><%= Tweet.human_attribute_name(:title) %>：</div>
+        <div><%= tweet.title %></div>
+      </div>
+
+      <% tweet.tags.each do |tag| %>
+        <div class="tag">
+          <div><%= Tag.human_attribute_name(:tag) %>：</div>
+          <div><%= tag.tag %></div>
+        </div>
+      <% end %>
+
+      <div class="text">
+        <div><%= tweet.text %></div>
+      </div>
+
+      <div class="nickname">
+        <%= tweet.user.nickname %>
+      </div>
+    </div>
+  <% end %>
+
+  <%= paginate @tweets %>
 </div>
